@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
 
+import Constructorexample from './Constructorexample';
+import PrevStateExample from './PrevStateExample';
+import ComponentShouldUpdateEx from "./ComponentShouldUpdateEx";
+import MapEx from './MapEx';
+import FilterEx from './FilterEx';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/* <Constructorexample/> */}
+    {/* <PrevStateExample/> */}
+    {/* <ComponentShouldUpdateEx/> */}
+    {/* <MapEx/> */}
+<FilterEx/>
+
+    </>
   );
 }
 

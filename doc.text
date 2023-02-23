@@ -1,0 +1,36 @@
+component banata hai tab sabase pehele constructor banata hai.
+
+Why is my component being rendered twice?
+The reason why this happens is an intentional feature of the React. StrictMode . It only happens in development mode
+ and should help to find accidental side effects in the render phase.
+ =========================================
+ construtor call once
+ render call every time
+ -------------------
+ componentDidMount=>dom ready hone ke bad call hota hai so api vaigera yaha call karna chahiye
+ html pe dependency reheti hai o code componentDidMount mai karni chahiye.
+ =====================
+componetnDidUpdate without give condion if we increment value change value it goes infinite loop
+ Error: Maximum update depth exceeded. 
+ =======================
+ render ke undar state change kar sakate hai=>Nahi kar sakate->without condition aap increment kar rahe ya update kar rahe hai to infinite loop me jayega
+ ========================
+ componentDidUpdate() will not  be invoked  if shouldComponentUpdate return false
+ ===================
+ shouldComponentUpdate() by default behaviour  ye component ko update nahi hone dega.ugar return true likha to 
+
+ shouldComponentUpdate ye updating phase ke undar aata hai=>ye rendering ko rokhata hai
+
+ return true or false kel nahitar => ComponentShouldUpdateEx.shouldComponentUpdate(): Returned undefined instead of a boolean value. Make sure to return true or false.
+    at ComponentShouldUpdateEx error yenar
+    =>shouldComponentUpdate render hone se rokhata hai
+    ============================
+
+    The getDerivedStateFromProps() method is used when the state of a component depends on changes of props. 
+    --------------------
+    =======================
+    Handling Event=>onClick is a property,onKeyDown,onKeyPress,onKeyUp
+    event handling->onClick
+    ------------------
+
+    map Vs for loop=>both are used iterarting the element but map() support in react and for loopnot support in returns
